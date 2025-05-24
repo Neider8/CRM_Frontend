@@ -4,7 +4,7 @@ import { Box, CssBaseline } from '@mui/material';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
-const drawerWidth = 260; // Puedes ajustar el ancho del sidebar aquí
+const drawerWidth = 255; // Puedes ajustar el ancho del sidebar aquí
 
 const MainLayout: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

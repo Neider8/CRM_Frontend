@@ -41,19 +41,19 @@ const Sidebar: React.FC<SidebarProps> = ({ mobileOpen, onDrawerToggle, drawerWid
   // Ajusta los paths y allowedRoles según tu estructura de backend y necesidades
   const menuItems: MenuItemStructure[] = [
     { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
-    { text: 'Clientes', icon: <PeopleIcon />, path: '/clientes', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
-    { text: 'Proveedores', icon: <BusinessIcon />, path: '/proveedores', allowedRoles: ['Administrador', 'Gerente'] },
-    { text: 'Productos', icon: <InventoryIcon />, path: '/productos' },
-    { text: 'Insumos', icon: <CategoryIcon />, path: '/insumos', allowedRoles: ['Administrador', 'Gerente', 'Operario'] },
-    { text: 'Órdenes de Venta', icon: <ShoppingCartIcon />, path: '/ordenes-venta', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
-    { text: 'Órdenes de Compra', icon: <StoreIcon />, path: '/ordenes-compra', allowedRoles: ['Administrador', 'Gerente'] },
-    { text: 'Órdenes de Producción', icon: <PrecisionManufacturingIcon />, path: '/ordenes-produccion', allowedRoles: ['Administrador', 'Gerente', 'Operario'] },
-    { text: 'Inv. Productos', icon: <WarehouseIcon />, path: '/inventario-productos' }, // Podrías renombrar "Inventario Productos" a algo más corto
-    { text: 'Inv. Insumos', icon: <WarehouseIcon sx={{ transform: 'scaleX(-1)'}}/>, path: '/inventario-insumos', allowedRoles: ['Administrador', 'Gerente', 'Operario'] }, // Ídem
-    { text: 'Pagos y Cobros', icon: <AccountBalanceWalletIcon />, path: '/pagos-cobros', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
-    { text: 'Usuarios', icon: <PersonOutlineIcon />, path: '/usuarios', allowedRoles: ['Administrador', 'Gerente'] },
-    { text: 'Empleados', icon: <GroupAddIcon />, path: '/empleados', allowedRoles: ['Administrador', 'Gerente'] },
-    { text: 'Roles y Permisos', icon: <VpnKeyIcon />, path: '/roles-permisos', allowedRoles: ['Administrador'] },
+    { text: 'Clientes', icon: <PeopleIcon />, path: '/customers', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
+    { text: 'Proveedores', icon: <BusinessIcon />, path: '/suppliers', allowedRoles: ['Administrador', 'Gerente'] },
+    { text: 'Productos', icon: <InventoryIcon />, path: '/products' },
+    { text: 'Insumos', icon: <CategoryIcon />, path: '/supplies', allowedRoles: ['Administrador', 'Gerente', 'Operario'] },
+    { text: 'Órdenes de Venta', icon: <ShoppingCartIcon />, path: '/sales-orders', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
+    { text: 'Órdenes de Compra', icon: <StoreIcon />, path: '/purchase-orders', allowedRoles: ['Administrador', 'Gerente'] },
+    { text: 'Órdenes de Producción', icon: <PrecisionManufacturingIcon />, path: '/production-orders', allowedRoles: ['Administrador', 'Gerente', 'Operario'] },
+    { text: 'Inv. Productos', icon: <WarehouseIcon />, path: '/inventory-products' }, // Podrías renombrar "Inventario Productos" a algo más corto
+    { text: 'Inv. Insumos', icon: <WarehouseIcon sx={{ transform: 'scaleX(-1)'}}/>, path: '/inventory-supplies', allowedRoles: ['Administrador', 'Gerente', 'Operario'] }, // Ídem
+    { text: 'Pagos y Cobros', icon: <AccountBalanceWalletIcon />, path: '/payments', allowedRoles: ['Administrador', 'Gerente', 'Ventas'] },
+    { text: 'Usuarios', icon: <PersonOutlineIcon />, path: '/users', allowedRoles: ['Administrador', 'Gerente'] },
+    { text: 'Empleados', icon: <GroupAddIcon />, path: '/users', allowedRoles: ['Administrador', 'Gerente'] },
+    { text: 'Roles y Permisos', icon: <VpnKeyIcon />, path: '/employees', allowedRoles: ['Administrador'] },
   ];
 
   const isUserAllowed = (itemRoles?: string[]): boolean => {
